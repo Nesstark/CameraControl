@@ -18,6 +18,9 @@ public class WebcamDisplay : MonoBehaviour
             // Start capturing from the webcam
             webcamTexture.Play();
 
+            // Flip the webcam texture horizontally
+            rawImage.transform.localScale = new Vector3(-1, 1, 1); // This line flips the texture
+
             // Assign the webcam texture to the RawImage
             rawImage.texture = webcamTexture;
         }
